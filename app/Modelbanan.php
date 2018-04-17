@@ -13,4 +13,4 @@ class Modelbanan extends Model
     	$this->hasMany('App\Modelgoimon','MaBan');
     }
 }
-}
+

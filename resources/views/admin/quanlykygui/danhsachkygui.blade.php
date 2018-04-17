@@ -12,88 +12,34 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Mã Ký Gửi</th>
+                  <th>Mã Gọi Món</th>
+                  <th>Mã Khách Hàng</th>
+                  <th>Tên Món</th>
+                  <th>Ngày Gửi</th>
+                  <th>Ngày Hết Hạn</th>
+                  <th>Tình Trạng</th>
+                  <th>Chức Năng</th>
                 </tr>
                 </thead>
                 <tbody>
+                  @foreach($kygui as $kg)
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
+                  <td>{{$kg->MaKyGui}}</td>
+                  <td>{{$kg->MaGoiMon}}
                   </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
+                  <td>{{$kg->MaKhachHang}}</td>
+                  <td>{{$kg->TenMon}}</td>
+                  <td>{{$kg->created_at}}</td>
+                  <td>{{$kg->NgayHetHan}}</td>
+                  <td>{{$kg->TinhTrang}}</td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Trả Hàng</button>
                   </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
                 </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.5
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 6
-                  </td>
-                  <td>Win 98+</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 7</td>
-                  <td>Win XP SP2+</td>
-                  <td>7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>AOL browser (AOL desktop)</td>
-                  <td>Win XP</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 1.0</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 1.5</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
+                  @endforeach
                 </tbody>
-                <tfoot>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-                </tfoot>
+
               </table>
             </div>
             <!-- /.box-body -->

@@ -13,4 +13,4 @@ class Modelloaimonan extends Model
     	$this->hasMany('App\Modelmonan','MaMonAn','MaLoai');
     }
 }
-}
+

@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use \App\Modelbanan;
 class BanAnController extends Controller
 {
     //
     public function getDanhSachBanAn(){
-    	return view('admin.quanlyban.danhsachbanan');
+    	$banan = Modelbanan::all();
+    	return view('admin.quanlyban.danhsachbanan',['banan'=>$banan]);
     }
 }
