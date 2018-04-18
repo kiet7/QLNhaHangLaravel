@@ -18,13 +18,11 @@ class Nhanvien extends Migration
             $table->string('TenNhanVien');
             $table->string('TenDangNhap');
             $table->string('MatKhau');
-            $table->boolean('GioiTinh');
-            $table->date('NgaySinh');
-            $table->integer('CMND');
-            $table->integer('quyen');
+            $table->string('CMND');
+            $table->string('NgayVaoLam');
+            $table->interger('quyen');
             $table->timestamps();
         });
-       
     }
 
     /**

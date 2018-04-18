@@ -20,6 +20,7 @@ class Kygui extends Migration
             $table->unsignedInteger('MaKhachHang');
             $table->foreign('MaKhachHang')->references('MaKhachHang')->on('khachhang');
             $table->string('TenMon');
+            $table->date('NgayGui');
             $table->date('NgayHetHan');
             $table->boolean('TinhTrang');
             $table->timestamps();

@@ -17,8 +17,8 @@
           <div class="card" style="margin-top: 2rem;">
             <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
             <div class="card-block">
-              <h4 class="card-title text-xs-center"><?php echo e($ba->tenban); ?></h4>
-              <p class="card-text"><?php echo e($ba->tinhtrang); ?></p>
+              <h4 class="card-title text-xs-center"><?php echo e($ba->TenBan); ?></h4>
+              <p class="card-text"><?php echo e($ba->TinhTrang); ?></p>
               <a href="#" class="btn btn-primary">Gọi Món</a>
             </div>
 

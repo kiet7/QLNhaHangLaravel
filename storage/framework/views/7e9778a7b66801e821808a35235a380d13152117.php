@@ -3,95 +3,48 @@
              <!-- /.box -->
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
+              
+              <div class="float-lg-right">
+                <button type="button" class="btn btn-primary">Thêm Nhân Viên</button>
+                <input type="text" name="">
+                <button type="button" class="btn btn-primary">Tìm Kiếm</button>
+              </div>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Mã Nhân Viên</th>
+                  <th>Tên Nhân Viên</th>
+                  <th>Tên Đăng Nhập</th>
+                  <th>Mật Khẩu</th>
+                  <th>CMND</th>
+                  <th>Ảnh</th>
+                  <th>Ngày Vào Làm</th>
+                  <th>Quyền</th>
+                  <th>Chức Năng</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.5
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 6
-                  </td>
-                  <td>Win 98+</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 7</td>
-                  <td>Win XP SP2+</td>
-                  <td>7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>AOL browser (AOL desktop)</td>
-                  <td>Win XP</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 1.0</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 1.5</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
-                </tr>
+                    <?php $__currentLoopData = $nhanvien; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $nv): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                           <tr>
+                            <td><?php echo e($nv->MaNhanVien); ?></td>
+                            <td><?php echo e($nv->TenNhanVien); ?></td>
+                            <td><?php echo e($nv->TenDangNhap); ?></td>
+                            <td><?php echo e($nv->MatKhau); ?></td>
+                            <td><?php echo e($nv->CMND); ?></td>
+                            <td>Ảnh</td>
+                            <td><?php echo e($nv->NgayVaoLam); ?></td>
+                            <td><?php echo e($nv->quyen); ?></td>
+                            <td>
+                              <button type="button" class="btn btn-primary">Chi Tiết Nhân Viên</button>
+                              <button type="button" class="btn btn-primary">Tính Lương</button>
+                            </td>
+                          </tr>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
-                <tfoot>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-                </tfoot>
+
               </table>
             </div>
             <!-- /.box-body -->

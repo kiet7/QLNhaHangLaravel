@@ -16,14 +16,12 @@ class Goimon extends Migration
         Schema::create('goimon', function (Blueprint $table) {
             $table->increments('MaGoiMon');
             $table->string('TinhTrang');
-            //$table->unsignedInteger('MaNhanVien');
-            //$table->foreign('MaNhanVien')->references('MaNhanVien')->on('nhanvien');
+            $table->unsignedInteger('MaNhanVien');
+            $table->foreign('MaNhanVien')->references('MaNhanVien')->on('nhanvien');
             $table->unsignedInteger('MaBan');
             $table->foreign('MaBan')->references('MaBan')->on('banan');
-
             $table->timestamps();
         });
-       
     }
 
     /**

@@ -17,7 +17,7 @@ class Chitietnhanvien extends Migration
             $table->unsignedInteger('MaNhanVien');
             $table->foreign('MaNhanVien')->references('MaNhanVien')->on('nhanvien');
             $table->double('HeSoLuong');
-            $table->integer('LuongCoBan');
+            $table->Integer('LuongCoBan');
             $table->date('NgayVaoLam');
             $table->timestamps();
         });

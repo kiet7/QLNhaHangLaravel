@@ -6,95 +6,44 @@
                           <!-- /.box -->
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
+              <button type="button" class="btn btn-primary">Thêm Nguyên Liệu</button>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Mã Nguyên Liệu</th>
+                  <th>Tên Nguyên Liệu</th>
+                  <th>Ngày Nhập</th>
+                  <th>Số Lượng</th>
+                  <th>Đơn Vị Tính</th>
+                  <th>Ngày Hết Hạn</th>
+                  <th>Tình trạng</th>
+                  <th>Mã Món Ăn</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.5
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 6
-                  </td>
-                  <td>Win 98+</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 7</td>
-                  <td>Win XP SP2+</td>
-                  <td>7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>AOL browser (AOL desktop)</td>
-                  <td>Win XP</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 1.0</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 1.5</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-                  <td>A</td>
+                      @foreach($nguyenlieu as $nl)
+                              <tr>
+                                <td>{{$nl->MaNguyenLieu}}</td>
+                                <td>{{$nl->TenNguyenLieu}}</td>
+                                <td>{{$nl->NgayNhap}}</td>
+                                <td>{{$nl->SoLuong}}</td>
+                                <td>{{$nl->DonViTinh}}</td>
+                                <td>{{$nl->NgayHetHan}}</td>
+                                <td>{{$nl->TinhTrang}}</td>
+                                <td>{{$nl->MaMonAn}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary">Sửa</button>
+                                    <button type="button" class="btn btn-primary">Xóa</button>
+                                    <button type="button" class="btn btn-primary">Thanh Toán</button>
+                                </td>
+                                
+                              </tr>
+                      @endforeach
                 </tr>
                 </tbody>
-                <tfoot>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-                </tfoot>
               </table>
             </div>
             <!-- /.box-body -->

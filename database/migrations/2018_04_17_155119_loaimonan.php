@@ -18,6 +18,7 @@ class Loaimonan extends Migration
             $table->string('TenLoai');
             $table->timestamps();
         });
+        
     }
 
     /**
@@ -28,5 +29,6 @@ class Loaimonan extends Migration
     public function down()
     {
         Schema::dropIfExists('loaimonan');
+        
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Monan extends Migration
+class Khuyenmai extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class Monan extends Migration
      */
     public function up()
     {
-        Schema::create('monan', function (Blueprint $table) {
-            $table->increments('MaMonAn');
-            $table->string('TenMonAn');
-            $table->integer('GiaTien');
-            $table->unsignedInteger('MaLoai');
-            $table->foreign('MaLoai')->references('MaLoai')->on('loaimonan');
+        Schema::create('khuyenmai', function (Blueprint $table) {
+            $table->increments('MaKhuyenMai');
+            $table->string('TenKhuyenMai');
+            $table->date('NgayKhuyenMai');
+            $table->date('NgayHetHan');
+            $table->Integer('PhanTram');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -31,6 +30,6 @@ class Monan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('monan');
+        Schema::dropIfExists('khuyenmai');
     }
 }

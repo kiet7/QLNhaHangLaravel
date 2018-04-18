@@ -18,7 +18,6 @@ Route::get('admin/socket', 'SocketController@index');
 Route::post('admin/sendmessage', 'SocketController@sendMessage');
 Route::get('admin/sendmessage', 'SocketController@sendMessage');
 
-
 Route::group(['prefix'=>'admin'],function(){
 
 		Route::group(['prefix'=>'thongke'],function(){

@@ -102,8 +102,6 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="admin/quanlynguyenlieu/danhsachnguyenlieu"><i class="fas fa-list"></i>Danh Sách Nguyên Liệu</a></li>
-          </ul>
-          <ul class="treeview-menu">
             <li><a href="admin/quanlynguyenlieu/themnguyenlieu"><i class="fa fa-edit"></i>Thêm Mới Nguyên Liệu</a></li>
           </ul>
         </li>
