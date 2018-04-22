@@ -36,12 +36,12 @@ Route::group(['prefix'=>'admin'],function(){
 		});
 		
 		Route::group(['prefix'=>'quanlymonan'],function(){
-			Route::get('danhsachmonan', 'MonAnController@getDanhSachMonAn');
-			Route::get('themmonan', 'MonAnController@getThemMonAn');
+			Route::get('/', 'MonAnController@getView');
+			Route::get('getList', 'MonAnController@getList');
 			Route::post('themmonan', 'MonAnController@postThemMonAn');
-			Route::get('suamonan', 'MonAnController@getSuaMonAn');
-			Route::post('suamonan', 'MonAnController@postSuaMonAn');
-			Route::get('xoamonan', 'MonAnController@getXoaMonAn');			
+			Route::get('suamonan/{MaMonAn}', 'MonAnController@getSuaMonAn');
+			Route::post('suamonan/{MaMonAn}', 'MonAnController@postSuaMonAn');
+			Route::get('xoamonan/{MaMonAn}', 'MonAnController@getXoaMonAn');			
 		});
 
 		Route::group(['prefix'=>'quanlyban'],function(){

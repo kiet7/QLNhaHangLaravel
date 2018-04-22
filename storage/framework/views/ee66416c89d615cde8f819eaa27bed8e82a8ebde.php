@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
   
   <meta charset="utf-8">
@@ -31,7 +31,7 @@
   <!-- Daterange picker -->
   <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -264,14 +264,14 @@
   $.widget.bridge('uibutton', $.ui.button);
 </script>
 <script >
-  var socket = io('http://192.168.58.2:3000');
-  function SendRequest(){
-    socket.emit('laravel', { my: 'data' });
-  }
-  socket.on('news', function (data) {
-    console.log(data);
+  // var socket = io('http://192.168.58.2:3000');
+  // function SendRequest(){
+  //   socket.emit('laravel', { my: 'data' });
+  // }
+  // socket.on('news', function (data) {
+  //   console.log(data);
     
-  });
+  // });
 </script>
 <!-- Bootstrap 3.3.7 -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -281,8 +281,7 @@
 <!-- Sparkline -->
 <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
-<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
 <!-- jQuery Knob Chart -->
 <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -291,7 +290,7 @@
 <!-- datepicker -->
 <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+
 <!-- Slimscroll -->
 <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
@@ -302,6 +301,11 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script src="angular/libs/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <script type="text/javascript" src="angular/app.js"></script>
+  
 </body>
 
 </html>
