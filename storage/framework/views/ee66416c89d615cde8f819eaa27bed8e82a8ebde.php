@@ -301,10 +301,13 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-<script src="angular/libs/angular.min.js"></script>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
   <script type="text/javascript" src="angular/app.js"></script>
+  <script type="text/javascript" src="angular/controller/MonAnController.js"></script>
+  <script type="text/javascript" src="angular/controller/LoaiMonAnController.js"></script>
   
 </body>
 

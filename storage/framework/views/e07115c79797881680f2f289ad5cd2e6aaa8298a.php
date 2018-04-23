@@ -304,7 +304,10 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
   <script type="text/javascript" src="angular/app.js"></script>
+  <script type="text/javascript" src="angular/controller/MonAnController.js"></script>
+  <script type="text/javascript" src="angular/controller/LoaiMonAnController.js"></script>
   
 </body>
 
