@@ -46,8 +46,8 @@ Route::group(['prefix' => 'admin'], function () {
 	});
 
 	Route::group(['prefix' => 'quanlyban'], function () {
-		Route::get('danhsachbanan', 'BanAnController@getDanhSachBanAn');
-		Route::get('thembanan', 'BanAnController@getThemBanAn');
+		Route::get('/', 'BanAnController@getDanhSachBanAn');
+		Route::get('getList', 'BanAnController@getList');
 		Route::post('thembanan', 'BanAnController@postThemBanAn');
 		Route::get('suabanan', 'BanAnController@getSuaBanAn');
 		Route::post('suabanan', 'BanAnController@postSuaBanAn');
