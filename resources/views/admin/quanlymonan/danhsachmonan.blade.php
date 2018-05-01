@@ -82,7 +82,7 @@
                         <div class="modal-body">
                             <form class="form-horizontal" name="frmMonAn">
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="inputEmail3">
+                                    <label class="col-sm-3 control-label" >
                                         Tên Món Ăn
                                     </label>
                                     <div class="col-sm-9">
@@ -93,7 +93,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="inputEmail3">
+                                    <label class="col-sm-3 control-label" >
                                         Giá Tiền
                                     </label>
                                     <div class="col-sm-9">
@@ -105,7 +105,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="inputEmail3">
+                                    <label class="col-sm-3 control-label" >
                                         Mã Loại Món Ăn
                                     </label>
                                     <div class="col-sm-9">

@@ -26,6 +26,15 @@ Route::group(['prefix' => 'admin'], function () {
 		Route::get('thongbao', 'DoanhThuController@getThongBao');
 	});
 
+	Route::group(['prefix' => 'quanlyban'], function () {
+		Route::get('/', 'BanAnController@getDanhSachBanAn');
+		Route::get('getList', 'BanAnController@getList');
+		Route::post('thembanan', 'BanAnController@postThemBanAn');
+		Route::get('suabanan', 'BanAnController@getSuaBanAn');
+		Route::post('suabanan', 'BanAnController@postSuaBanAn');
+		Route::get('xoabanan', 'BanAnController@getXoaBanAn');
+	});
+
 	Route::group(['prefix' => 'quanlyloaimonan'], function () {
 		Route::get('/', 'LoaiMonAnController@getView');
 		Route::get('getList', 'LoaiMonAnController@getList');
@@ -45,30 +54,21 @@ Route::group(['prefix' => 'admin'], function () {
 		Route::get('xoamonan/{MaMonAn}', 'MonAnController@getXoaMonAn');
 	});
 
-	Route::group(['prefix' => 'quanlyban'], function () {
-		Route::get('/', 'BanAnController@getDanhSachBanAn');
-		Route::get('getList', 'BanAnController@getList');
-		Route::post('thembanan', 'BanAnController@postThemBanAn');
-		Route::get('suabanan', 'BanAnController@getSuaBanAn');
-		Route::post('suabanan', 'BanAnController@postSuaBanAn');
-		Route::get('xoabanan', 'BanAnController@getXoaBanAn');
-	});
-
 	Route::group(['prefix' => 'quanlynguyenlieu'], function () {
-		Route::get('danhsachnguyenlieu', 'NguyenLieuController@getDanhSachNguyenLieu');
-		Route::get('themnguyenlieu', 'NguyenLieuController@getThemNguyenLieu');
+		Route::get('/', 'NguyenLieuController@getView');
+		Route::get('getList', 'NguyenLieuController@getList');
 		Route::post('themnguyenlieu', 'NguyenLieuController@postThemNguyenLieu');
-		Route::get('suanguyenlieu', 'NguyenLieuController@getSuaNguyenLieu');
-		Route::post('suanguyenlieu', 'NguyenLieuController@postNguyenLieu');
-		Route::get('xoanguyenlieu', 'NguyenLieuController@getXoaNguyenLieu');
+		Route::get('suanguyenlieu/{MaNguyenLieu}', 'NguyenLieuController@getSuaNguyenLieu');
+		Route::post('suanguyenlieu/{MaNguyenLieu}', 'NguyenLieuController@postSuaNguyenLieu');
+		Route::get('xoanguyenlieu/{MaNguyenLieu}', 'NguyenLieuController@getXoaNguyenLieu');
 	});
 	Route::group(['prefix' => 'quanlykygui'], function () {
-		Route::get('danhsachkygui', 'KyGuiController@getDanhSachKyGui');
-		Route::get('themkygui', 'KyGuiController@getThemKyGuiu');
+		Route::get('/', 'KyGuiController@getView');
+		Route::get('getList', 'KyGuiController@getList');
 		Route::post('themkygui', 'KyGuiController@postThemKyGui');
-		Route::get('suakygui', 'KyGuiController@getSuaKyGui');
-		Route::post('suakygui', 'KyGuiController@postSuaKyGui');
-		Route::get('xoakygui', 'KyGuiController@getXoaKyGui');
+		Route::get('suakygui/{MaKyGui}', 'KyGuiController@getSuaKyGui');
+		Route::post('suakygui/{MaKyGui}', 'KyGuiController@postSuaKyGui');
+		Route::get('xoakygui/{MaKyGui}', 'KyGuiController@getXoaKyGui');
 	});
 	Route::group(['prefix' => 'khuyenmai'], function () {
 		Route::get('danhsachkhuyenmai', 'KhuyenMaiController@getDanhSachKhuyenMai');
@@ -87,12 +87,12 @@ Route::group(['prefix' => 'admin'], function () {
 		Route::get('xoaorder', 'OrderController@getXoaOrder');
 	});
 	Route::group(['prefix' => 'quanlynhanvien'], function () {
-		Route::get('danhsachnhanvien', 'NhanVienController@getDanhSachNhanVien');
-		Route::get('themnhanvien', 'NhanVienController@getThemNhanVien');
+		Route::get('/', 'NhanVienController@getView');
+		Route::get('getList', 'NhanVienController@getList');
 		Route::post('themnhanvien', 'NhanVienController@postThemNhanVien');
-		Route::get('suanhanvien', 'NhanVienController@getSuaNhanVien');
-		Route::post('suanhanvien', 'NhanVienController@postSuaNhanVien');
-		Route::get('xoanhanvien', 'NhanVienController@getXoaNhanVien');
+		Route::get('suanhanvien/{MaNhanVien}', 'NhanVienController@getSuaNhanVien');
+		Route::post('suanhanvien/{MaNhanVien}', 'NhanVienController@postSuaNhanVien');
+		Route::get('xoanhanvien/{MaNhanVien}', 'NhanVienController@getXoaNhanVien');
 	});
 
 });

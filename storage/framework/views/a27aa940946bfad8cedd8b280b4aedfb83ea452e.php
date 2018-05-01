@@ -95,7 +95,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="admin/quanlyban/danhsachbanan">
+                        <a href="admin/quanlyban/">
                             <i class="fas fa-list">
                             </i>
                             Danh Sách Bàn Ăn
@@ -182,7 +182,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="admin/quanlynhanvien/danhsachnhanvien">
+                        <a href="admin/quanlynhanvien/">
                             <i class="fas fa-list">
                             </i>
                             Danh Sách Nhân Viên
@@ -193,6 +193,35 @@
                             <i class="fa fa-edit">
                             </i>
                             Thêm Nhân Viên
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-users">
+                    </i>
+                    <span>
+                        Quản Lý Khách Hàng
+                    </span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right">
+                        </i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="admin/quanlykhachhang/">
+                            <i class="fas fa-list">
+                            </i>
+                            Danh Sách Khách Hàng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin/quanlynhanvien/themnhanvien">
+                            <i class="fa fa-edit">
+                            </i>
+                            Thêm Khách Hàng
                         </a>
                     </li>
                 </ul>
@@ -211,7 +240,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="admin/quanlynguyenlieu/danhsachnguyenlieu">
+                        <a href="admin/quanlynguyenlieu/">
                             <i class="fas fa-list">
                             </i>
                             Danh Sách Nguyên Liệu
@@ -240,7 +269,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="admin/quanlykygui/danhsachkygui">
+                        <a href="admin/quanlykygui/">
                             <i class="fas fa-list">
                             </i>
                             Danh Sách Hàng Ký Gửi
@@ -269,7 +298,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="admin/khuyenmai/danhsachkhuyenmai">
+                        <a href="admin/khuyenmai/">
                             <i class="fas fa-list">
                             </i>
                             Danh Sách Khuyến Mãi

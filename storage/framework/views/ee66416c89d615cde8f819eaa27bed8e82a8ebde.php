@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-  
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 2 | Dashboard</title>
@@ -11,7 +11,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
 
-   
+
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
@@ -53,11 +53,11 @@
   <?php echo $__env->make('layout.headeradmin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   <!-- Left side column. contains the logo and sidebar -->
   <?php echo $__env->make('layout.sidebaradmin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-  
+
   <!-- Content Wrapper. Contains page content -->
       <?php echo $__env->yieldContent('content'); ?>
   <!-- /.content-wrapper -->
-  
+
   <?php echo $__env->make('layout.footeradmin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -171,7 +171,7 @@
           </li>
         </ul>
         <!-- /.control-sidebar-menu -->
-      
+
       </div>
       <!-- /.tab-pane -->
       <!-- Stats tab content -->
@@ -270,7 +270,7 @@
   // }
   // socket.on('news', function (data) {
   //   console.log(data);
-    
+
   // });
 </script>
 <!-- Bootstrap 3.3.7 -->
@@ -308,6 +308,7 @@
   <script type="text/javascript" src="angular/app.js"></script>
   <script type="text/javascript" src="angular/controller/MonAnController.js"></script>
   <script type="text/javascript" src="angular/controller/LoaiMonAnController.js"></script>
+  <script type="text/javascript" src="angular/controller/NguyenLieuController.js"></script>
   
 </body>
 
