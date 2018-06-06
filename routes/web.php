@@ -12,14 +12,16 @@
  */
 
 Route::get('/admin', function () {
+
 	return view('admin/index');
 });
+Route::get('/maindata', 'maincontroller@getalldata');
 Route::get('admin/socket', 'SocketController@index');
 Route::post('admin/sendmessage', 'SocketController@sendMessage');
 Route::get('admin/sendmessage', 'SocketController@sendMessage');
 
 Route::group(['prefix' => 'admin'], function () {
-
+	Route::get('/maindata', 'maincontroller@getalldata');
 	Route::group(['prefix' => 'thongke'], function () {
 		Route::get('thongkedoanhthu', 'DoanhThuController@getThongKeDoanhThu');
 		Route::get('thongkenguyenlieu', 'DoanhThuController@getThongKeNguyenLieu');

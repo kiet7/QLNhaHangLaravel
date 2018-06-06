@@ -303,15 +303,16 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/QLNhaHang/public/angular/libs/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
   <script type="text/javascript" src="angular/app.js"></script>
   <script type="text/javascript" src="angular/controller/MonAnController.js"></script>
   <script type="text/javascript" src="angular/controller/LoaiMonAnController.js"></script>
   <script type="text/javascript" src="angular/controller/NguyenLieuController.js"></script>
   <script type="text/javascript" src="angular/controller/NhanVienController.js"></script>
   <script type="text/javascript" src="angular/controller/KyGuiController.js"></script>
+  <script type="text/javascript" src="angular/controller/MainController.js"></script>
 
   {{-- <script type="text/javascript" src="app/controllers/SinhVienController.js"></script> --}}
 </body>

@@ -1,5 +1,4 @@
 app.controller('MonAnController',function($scope,$route,$http,API){
-		// Simple GET request example:
 		var URL = API + '/quanlymonan';
 		var vm = function(URL){
 			var linkget = URL +'/getList';
@@ -64,7 +63,7 @@ app.controller('MonAnController',function($scope,$route,$http,API){
 				}).then(function successCallback(response) {
 					console.log(response);
 					$scope.monan = response.data[0];
-
+					
 			    // this callback will be called asynchronously
 			    // when the response is available
 				  }, function errorCallback(response) {
@@ -93,6 +92,7 @@ app.controller('MonAnController',function($scope,$route,$http,API){
 						headers : {'Content-Type' : 'application/x-www-form-urlencoded'}
 					}).then(function successCallback(response) {
 						console.log(response);
+						
 						vm(URL);
 
 				    // this callback will be called asynchronously
@@ -140,6 +140,7 @@ app.controller('MonAnController',function($scope,$route,$http,API){
 					  url: URL+'/xoamonan/'+MaMonAn
 					}).then(function successCallback(response) {
 						console.log(response);
+						
 						vm(URL);
 					    // this callback will be called asynchronously
 					    // when the response is available

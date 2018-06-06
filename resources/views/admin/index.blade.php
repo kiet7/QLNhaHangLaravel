@@ -1,7 +1,8 @@
 @extends('layout.masteradmin')
 
 @section('content')
-       <!-- Content Wrapper. Contains page content -->
+  <div ng-controller="MainController">
+            <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -23,9 +24,9 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>150</h3>
+              <h3>%%dulieu.listgoimon%%</h3>
 
-              <p>New Orders</p>
+              <p>Gọi Món Mới</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
@@ -53,7 +54,7 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
+              <h3>%% dulieu.listnhanvien %%</h3>
 
               <p>Nhân Viên</p>
             </div>
@@ -68,7 +69,7 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>65</h3>
+              <h3>%% dulieu.listkygui %%</h3>
 
               <p>Ký Gửi</p>
             </div>
@@ -84,29 +85,15 @@
       <!-- Main row -->
       <div class="row">
         <!-- Left col -->
-        <section class="col-lg-7 connectedSortable">
-          <!-- Custom tabs (Charts with tabs)-->
-          <div class="nav-tabs-custom">
-            <!-- Tabs within a box -->
-            <ul class="nav nav-tabs pull-right">
-              <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-              <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-              <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
-            </ul>
-            <div class="tab-content no-padding">
-              <!-- Morris chart - Sales -->
-              <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-              <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-            </div>
-          </div>
-          <!-- /.nav-tabs-custom -->
+        <section class="col-lg-12 connectedSortable">
 
-          
+
+
 
           <!-- TABLE: LATEST ORDERS -->
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Latest Orders</h3>
+              <h3 class="box-title">Gọi Món Mới Nhất</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -123,42 +110,19 @@
                     <th>Order ID</th>
                     <th>Bàn</th>
                     <th>Trạng Thái</th>
-                    <th>Thanh Toán</th>
+                    <th>Nhân Viên</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="label label-success">Shipped</span></td>
+                  <tr ng-repeat="ds in dsgoimon">
+                    <td><a href="pages/examples/invoice.html">%%ds.MaGoiMon%%</a></td>
+                    <td>Bàn %%ds.MaBan%%</td>
+                    <td><span class="label label-success">%%ds.TinhTrang%%</span></td>
                     <td>
-                      <span class="label label-success">Đã Thanh Toán</span>
+                      <span class="label label-success">%%ds.TenNhanVien%%</span>
                     </td>
                   </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="label label-warning">Pending</span></td>
-                    <td>
-                      <span class="label label-success">Đã Thanh Toán</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="label label-danger">Delivered</span></td>
-                    <td>
-                      <span class="label label-success">Đã Thanh Toán</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="label label-info">Processing</span></td>
-                    <td>
-                      <span class="label label-info">Đã Thanh Toán</span>
-                    </td>
-                  </tr>
+
 
                   </tbody>
                 </table>
@@ -175,8 +139,53 @@
           </div>
           <!-- /.box -->
 
-          
-           
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Đặt Bàn Mới Nhất</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="table-responsive">
+                <table class="table no-margin">
+                  <thead>
+                  <tr>
+                    <th>Mã Đặt Bàn</th>
+                    <th>Bàn</th>
+                    <th>Thời Gian</th>
+                    <th>Khách Hàng</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr ng-repeat="ds in dsgoimon">
+                    <td>%%ds.MaGoiMon%%</td>
+                    <td>Bàn %%ds.MaBan%%</td>
+                    <td><span class="label label-warning">%%ds.TinhTrang%%</span></td>
+                    <td>
+                      <span class="label label-danger">%%ds.TenNhanVien%%</span>
+                    </td>
+                  </tr>
+
+
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.table-responsive -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer clearfix">
+
+              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+
+            </div>
+            <!-- /.box-footer -->
+          </div>
+
 
 
         </section>
@@ -184,131 +193,11 @@
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
         <section class="col-lg-5 connectedSortable">
 
-          
 
-          <!-- solid sales graph -->
-          <div class="box box-solid bg-teal-gradient">
-            <div class="box-header">
-              <i class="fa fa-th"></i>
 
-              <h3 class="box-title">Sales Graph</h3>
 
-              <div class="box-tools pull-right">
-                <button type="button" class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn bg-teal btn-sm" data-widget="remove"><i class="fa fa-times"></i>
-                </button>
-              </div>
-            </div>
-            <div class="box-body border-radius-none">
-              <div class="chart" id="line-chart" style="height: 250px;"></div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer no-border">
-              <div class="row">
-                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                  <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
-                         data-fgColor="#39CCCC">
 
-                  <div class="knob-label">Mail-Orders</div>
-                </div>
-                <!-- ./col -->
-                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                  <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
-                         data-fgColor="#39CCCC">
 
-                  <div class="knob-label">Online</div>
-                </div>
-                <!-- ./col -->
-                <div class="col-xs-4 text-center">
-                  <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
-                         data-fgColor="#39CCCC">
-
-                  <div class="knob-label">In-Store</div>
-                </div>
-                <!-- ./col -->
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.box-footer -->
-          </div>
-          <!-- /.box -->
-
-          <!-- Calendar -->
-          <div class="box box-solid bg-green-gradient">
-            <div class="box-header">
-              <i class="fa fa-calendar"></i>
-
-              <h3 class="box-title">Calendar</h3>
-              <!-- tools box -->
-              <div class="pull-right box-tools">
-                <!-- button with a dropdown -->
-                <div class="btn-group">
-                  <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-bars"></i></button>
-                  <ul class="dropdown-menu pull-right" role="menu">
-                    <li><a href="#">Add new event</a></li>
-                    <li><a href="#">Clear events</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">View calendar</a></li>
-                  </ul>
-                </div>
-                <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i>
-                </button>
-              </div>
-              <!-- /. tools -->
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-              <!--The calendar -->
-              <div id="calendar" style="width: 100%"></div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer text-black">
-              <div class="row">
-                <div class="col-sm-6">
-                  <!-- Progress bars -->
-                  <div class="clearfix">
-                    <span class="pull-left">Task #1</span>
-                    <small class="pull-right">90%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                  </div>
-
-                  <div class="clearfix">
-                    <span class="pull-left">Task #2</span>
-                    <small class="pull-right">70%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
-                  </div>
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-6">
-                  <div class="clearfix">
-                    <span class="pull-left">Task #3</span>
-                    <small class="pull-right">60%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
-                  </div>
-
-                  <div class="clearfix">
-                    <span class="pull-left">Task #4</span>
-                    <small class="pull-right">40%</small>
-                  </div>
-                  <div class="progress xs">
-                    <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
-                  </div>
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
-          </div>
           <!-- /.box -->
 
         </section>
@@ -320,12 +209,13 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+  </div>
 @endsection
 
 
 
 
 
- 
+
 
 

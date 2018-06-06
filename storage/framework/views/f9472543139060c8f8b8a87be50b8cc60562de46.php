@@ -14,7 +14,7 @@
 
         <?php $__currentLoopData = $banan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ba): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="col-sm-3">
-          <div class="card" style="margin-top: 2rem;">
+          <div class="card text-center" style="margin-top: 2rem;">
             <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap">
             <div class="card-block">
               <h4 class="card-title text-xs-center"><?php echo e($ba->TenBan); ?></h4>

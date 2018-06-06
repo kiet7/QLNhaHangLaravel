@@ -101,13 +101,7 @@
                             Danh Sách Bàn Ăn
                         </a>
                     </li>
-                    <li>
-                        <a href="admin/quanlyban/thembanan">
-                            <i class="fa fa-table">
-                            </i>
-                            Thêm Bàn Ăn
-                        </a>
-                    </li>
+
                 </ul>
             </li>
             <li class="treeview">
@@ -130,13 +124,7 @@
                             Danh Sách Loại Món Ăn
                         </a>
                     </li>
-                    <li>
-                        <a href="admin/quanlyloaimonan/themloaimonan">
-                            <i class="fa fa-edit">
-                            </i>
-                            Thêm Loại Món Ăn
-                        </a>
-                    </li>
+
                 </ul>
             </li>
             <li class="treeview">
@@ -159,13 +147,7 @@
                             Danh Sách Món Ăn
                         </a>
                     </li>
-                    <li>
-                        <a href="admin/quanlymonan/themmonan">
-                            <i class="fa fa-edit">
-                            </i>
-                            Thêm món Ăn
-                        </a>
-                    </li>
+
                 </ul>
             </li>
             <li class="treeview">
@@ -188,13 +170,7 @@
                             Danh Sách Nhân Viên
                         </a>
                     </li>
-                    <li>
-                        <a href="admin/quanlynhanvien/themnhanvien">
-                            <i class="fa fa-edit">
-                            </i>
-                            Thêm Nhân Viên
-                        </a>
-                    </li>
+
                 </ul>
             </li>
             <li class="treeview">
@@ -217,13 +193,8 @@
                             Danh Sách Khách Hàng
                         </a>
                     </li>
-                    <li>
-                        <a href="admin/quanlynhanvien/themnhanvien">
-                            <i class="fa fa-edit">
-                            </i>
-                            Thêm Khách Hàng
-                        </a>
-                    </li>
+
+
                 </ul>
             </li>
             <li class="treeview">
@@ -246,13 +217,7 @@
                             Danh Sách Nguyên Liệu
                         </a>
                     </li>
-                    <li>
-                        <a href="admin/quanlynguyenlieu/themnguyenlieu">
-                            <i class="fa fa-edit">
-                            </i>
-                            Thêm Mới Nguyên Liệu
-                        </a>
-                    </li>
+
                 </ul>
             </li>
             <li class="treeview">
@@ -275,44 +240,10 @@
                             Danh Sách Hàng Ký Gửi
                         </a>
                     </li>
-                    <li>
-                        <a href="admin/quanlykygui/themkygui">
-                            <i class="fa fa-edit">
-                            </i>
-                            Thêm Ký Gửi
-                        </a>
-                    </li>
+
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-share">
-                    </i>
-                    <span>
-                        Khuyến Mãi
-                    </span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right">
-                        </i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li>
-                        <a href="admin/khuyenmai/">
-                            <i class="fas fa-list">
-                            </i>
-                            Danh Sách Khuyến Mãi
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin/khuyenmai/themmoikhuyenmai">
-                            <i class="fa fa-edit">
-                            </i>
-                            Thêm Mới Khuyến Mãi
-                        </a>
-                    </li>
-                </ul>
-            </li>
+
         </ul>
     </section>
     <!-- /.sidebar -->

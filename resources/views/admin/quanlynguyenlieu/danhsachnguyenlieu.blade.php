@@ -87,7 +87,6 @@
                                     Đơn Vị Tính
                                 </label>
                                 <div class="col-sm-9">
-                                    <div class="form-group"  >
                                       <select class="form-control" id="DonViTinh" name="DonViTinh" ng-model="nguyenlieus.DonViTinh">
                                         <option>Chai</option>
                                         <option>Kilogam</option>
@@ -95,18 +94,15 @@
                                         <option>Cái</option>
                                         <option>Chiếc</option>
                                       </select>
-                                      {{-- <span class="help-block" id="helpBlock2" ng-show="frmNguyenLieu.DonViTinh.$error.required">
+                                      <span class="help-block" id="helpBlock2" ng-show="!frmNguyenLieu.DonViTinh.$error.required">
                                         Vui lòng nhập Đơn Vị Tính
-                                      </span> --}}
-                                    </div>
-
-
+                                    </span>
                                 </div>
                                 <label class="col-sm-3 control-label" >
                                     Ngày Hết Hạn
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="NgayHetHan" name="NgayHetHan" ng-model="nguyenlieus.NgayHetHan" ng-required="true" placeholder="Vui lòng nhập ngày hết hạn" type="datetime"/>
+                                    <input class="form-control" id="NgayHetHan" name="NgayHetHan" ng-model="nguyenlieus.NgayHetHan" ng-required="true" placeholder="Vui lòng nhập ngày hết hạn" type="date"/>
                                     <span class="help-block" id="helpBlock2" ng-show="frmNguyenLieu.NgayHetHan.$error.required">
                                         Vui lòng nhập Ngày Hết Hạn
                                     </span>
