@@ -11,13 +11,16 @@ class KyGuiController extends Controller {
 		return view('admin.quanlykygui.danhsachkygui');
 	}
 	public function getList() {
-		$kygui = Modelkygui::all();
+		$kygui = Modelkygui::join('khachhang', 'kygui.makhachhang', '=', 'khachhang.makhachhang')->get();
+
+		//$kygui = Modelkygui::orderBy('MaKyGui', 'DESC')->with('khachhang')->get();
 		return response()->json($kygui);
 	}
 	public function postThemKyGui(Request $request) {
 		$kygui = new Modelkygui;
-		$kygui->TenLoai = $request->TenLoai;
-
+		$kygui->MaGoiMon = $request->MaGoiMon;
+		$kygui->TenMon = $request->TenMon;
+		$kygui->MaKhachHang = $request->MaKhachHang;
 		$kygui->created_at = new Datetime();
 
 		$kygui->save();

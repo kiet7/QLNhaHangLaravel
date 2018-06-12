@@ -9,23 +9,29 @@
                 <h3 class="box-title text-xs-center">
                     Danh Sách Món Ăn
                 </h3>
-                <select name="MaLoai" id="search" ng-model="search.MaLoai">
-                    <option ng-repeat="y in loaimonans" selected="%%y.MaLoai%%" value="%%y.MaLoai%%" >
-                        %%y.TenLoai%%
-                    </option>
-                </select>
-                <button type="button" class="btn btn-primary" ng-click="Loc()">Lọc</button>
+                <div class="pull-right">
+                    <input type="text" placeholder="Nhập Tên Món Ăn"  ng-model="tenmonan">
+                </div>
+
+
+
             </div>
             <!-- /.box-header -->
             <div class="box-body">
                 <button class="btn btn-info btn-lg" ng-click="modal('add')" type="button">
                     Thêm Món Ăn
                 </button>
+                <select name="MaLoai" id="search" ng-model="search.MaLoai">
+                    <option ng-repeat="y in loaimonans" selected="%%y.MaLoai%%" value="%%y.MaLoai%%" >
+                        %%y.TenLoai%%
+                    </option>
+                </select>
+                <button type="button" class="btn btn-primary" ng-click="Loc()">Lọc</button>
                 <table class="table table-bordered table-striped" id="example1">
                     <thead>
                         <tr>
                             <th>
-                                Mã Món Ăn
+                               STT
                             </th>
                             <th>
                                 Tên Món Ăn
@@ -42,9 +48,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="ma in monans">
+                        <tr ng-init="start = 0" ng-repeat="ma in monans|filter:tenmonan">
                             <th>
-                                %% ma.MaMonAn %%
+                                %% $index + 1 | number %%
                             </th>
                             <th>
                                 %% ma.TenMonAn %%

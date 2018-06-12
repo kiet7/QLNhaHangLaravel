@@ -14,27 +14,27 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Mã Ký Gửi</th>
+                  <th>STT</th>
                   <th>Mã Gọi Món</th>
-                  <th>Mã Khách Hàng</th>
+                  <th>Tên Khách Hàng</th>
                   <th>Tên Món</th>
                   <th>Ngày Gửi</th>
                   <th>Ngày Hết Hạn</th>
-                  <th>Tình Trạng</th>
+                  <th>Trạng Thái</th>
                   <th>Chức Năng</th>
                 </tr>
                 </thead>
                 <tbody>
 
                 <tr ng-repeat="kg in kyguis">
-                  <td>%%kg.MaKyGui%%</td>
-                  <td>%%kg.MaGoiMon%%
-                  </td>
-                  <td>%%kg.MaKhachHang%%</td>
+                  <td>%% $index + 1 | number %%</td>
+                  <td>%%kg.MaGoiMon%%</td>
+                  <td>%%kg.TenKhachHang%%</td>
                   <td>%%kg.TenMon%%</td>
-                  <td>%%kg.created_at%%</td>
+                  <td>%%kg.NgayGui%%</td>
                   <td>%%kg.NgayHetHan%%</td>
-                  <td>%%kg.TinhTrang%%</td>
+                  <td ng-if="kg.TinhTrang == 1">Đang Còn</td>
+                  <td ng-if="kg.TinhTrang == 0">Hết</td>
                   <td>
                     <button type="button" class="btn btn-primary">Trả Hàng</button>
                   </td>
@@ -62,49 +62,43 @@
                         </div>
                         <div class="modal-body">
                             <form class="form-horizontal" name="frmKyGui">
-                                <div class="form-group">
+                              <div class="form-group">
                                     <label class="col-sm-3 control-label" >
-                                        Tên Món Ăn
+                                        Mã Gọi Món
                                     </label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" id="TenMonAn" name="TenMonAn" ng-model="monan.TenMonAn" ng-required="true" placeholder="Vui lòng nhập tên món ăn" type="text"/>
-                                        <span class="help-block" id="helpBlock2" ng-show="frmKyGui.TenMonAn.$error.required">
+                                        <input class="form-control" id="MaGoiMon" name="MaGoiMon" ng-model="kygui.MaGoiMon" ng-required="true" placeholder="Vui lòng nhập Mã Gọi Món" type="text"/>
+                                        <span class="help-block" id="helpBlock2" ng-show="frmKyGui.MaGoiMon.$error.required">
+                                            Vui lòng Mã Gọi Món
+                                        </span>
+                                    </div>
+                                </div>
+                              <div class="form-group">
+                                    <label class="col-sm-3 control-label" >
+                                        Tên Khách hàng
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" id="TenKhachHang" name="TenKhachHang" ng-model="kygui.TenKhachHang" ng-required="true" placeholder="Vui lòng nhập tên Khách Hàng" type="text"/>
+                                        <span class="help-block" id="helpBlock2" ng-show="frmKyGui.TenKhachHang.$error.required">
                                             Vui lòng nhập tên món ăn
                                         </span>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" >
-                                        Giá Tiền
+                                        Tên Món Ăn
                                     </label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" id="GiaTien" name="GiaTien" ng-model="monan.GiaTien" ng-required="true" placeholder="Vui lòng nhập giá tiền" type="text">
-                                            <span class="help-block" id="helpBlock2" ng-show="frmKyGui.GiaTien.$error.required">
-                                                Vui lòng nhập giá tiền
-                                            </span>
-                                        </input>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label" >
-                                        Mã Loại Món Ăn
-                                    </label>
-                                    <div class="col-sm-9">
-                                        <select name="MaLoai" ng-model="monan.MaLoai">
-                                            <option ng-repeat="x in loaimonans" selected="%%x.MaLoai%%" value="%%x.MaLoai%%" >
-                                                %%x.TenLoai%%
-                                            </option>
-                                        </select>
-
-                                        <span class="help-block" id="helpBlock2" ng-show="frmKyGui.MaLoai.$error.required">
-                                            Vui lòng nhập mã loại món ăn
+                                        <input class="form-control" id="TenMonAn" name="TenMonAn" ng-model="kygui.TenMonAn" ng-required="true" placeholder="Vui lòng nhập tên món ăn" type="text"/>
+                                        <span class="help-block" id="helpBlock2" ng-show="frmKyGui.TenMonAn.$error.required">
+                                            Vui lòng nhập tên món ăn
                                         </span>
                                     </div>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-primary" ng-click="save(state,monan.MaMonAn)" ng-disabled="frmKyGui.$invalid" type="button">
+                            <button class="btn btn-primary" ng-click="save(state,kygui.MaKyGui)" ng-disabled="frmKyGui.$invalid" type="button">
                                 Lưu
                             </button>
                         </div>

@@ -36,6 +36,14 @@ Route::group(['prefix' => 'admin'], function () {
 		Route::post('suabanan', 'BanAnController@postSuaBanAn');
 		Route::get('xoabanan', 'BanAnController@getXoaBanAn');
 	});
+	Route::group(['prefix' => 'quanlykhachhang'], function () {
+		Route::get('/', 'BanAnController@getDanhSachBanAn');
+		Route::get('getList', 'BanAnController@getList');
+		Route::post('thembanan', 'BanAnController@postThemBanAn');
+		Route::get('suabanan', 'BanAnController@getSuaBanAn');
+		Route::post('suabanan', 'BanAnController@postSuaBanAn');
+		Route::get('xoabanan', 'BanAnController@getXoaBanAn');
+	});
 
 	Route::group(['prefix' => 'quanlyloaimonan'], function () {
 		Route::get('/', 'LoaiMonAnController@getView');

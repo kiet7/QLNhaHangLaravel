@@ -7,7 +7,7 @@
 
               <div class="float-lg-right">
                 <button type="button" class="btn btn-primary" ng-click="modal('add')">Thêm Nhân Viên</button>
-                <input type="text" name="">
+                <input type="text" name="" ng-model="tennhanvien">
                 <button type="button" class="btn btn-primary">Tìm Kiếm</button>
               </div>
             </div>
@@ -29,7 +29,7 @@
                 </thead>
                 <tbody>
 
-                           <tr ng-repeat="nvs in nhanviens">
+                           <tr ng-repeat="nvs in nhanviens|filter:tennhanvien">
                             <td>
                               %%nvs.MaNhanVien%%
                             </td>

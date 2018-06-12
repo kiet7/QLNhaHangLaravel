@@ -11,7 +11,7 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Mã Nguyên Liệu</th>
+                  <th>STT</th>
                   <th>Tên Nguyên Liệu</th>
                   <th>Ngày Nhập</th>
                   <th>Số Lượng</th>
@@ -24,7 +24,7 @@
                 <tbody>
 
                               <tr ng-repeat="nl in nguyenlieu">
-                                <td>%%nl.MaNguyenLieu%%</td>
+                                <td> %% $index + 1 | number %%</td>
                                 <td>%%nl.TenNguyenLieu%%</td>
                                 <td>%%nl.NgayNhap%%</td>
                                 <td>%%nl.SoLuong%%</td>

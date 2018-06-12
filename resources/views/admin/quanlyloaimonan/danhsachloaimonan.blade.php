@@ -19,7 +19,7 @@
                     <thead>
                         <tr>
                             <th>
-                                Mã Loại Món Ăn
+                               STT
                             </th>
                             <th>
                                 Tên Loại Món Ăn
@@ -38,7 +38,7 @@
                     <tbody>
                         <tr ng-repeat="lma in loaimonans">
                             <td>
-                                %%lma.MaLoai%%
+                                 %% $index + 1 | number %%
                             </td>
                             <td>
                                 %%lma.TenLoai%%

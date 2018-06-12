@@ -91,7 +91,7 @@
           <!-- TABLE: LATEST ORDERS -->
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Gọi Món Mới Nhất</h3>
+              <h3 class="box-title text-center">Gọi Món Mới Nhất</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -155,7 +155,7 @@
                   <tr>
                     <th>Mã Đặt Bàn</th>
                     <th>Bàn</th>
-                    <th>Thời Gian</th>
+                    <th>Tình Trạng</th>
                     <th>Khách Hàng</th>
                   </tr>
                   </thead>

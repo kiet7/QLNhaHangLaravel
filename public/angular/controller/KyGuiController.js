@@ -10,6 +10,7 @@ app.controller('KyGuiController',function($scope,$route,$http,API){
 			$scope.kyguis = response.data;
 			
 			
+			//console.log(response);
 			console.log(response);
 		    // this callback will be called asynchronously
 		    // when the response is available
